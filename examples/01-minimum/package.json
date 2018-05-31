@@ -1,0 +1,21 @@
+{
+  "name": "botsocket-client-example-01-minimum",
+  "version": "0.1.0",
+  "description": "Minimum working example implementation of the Zwerm web client",
+  "license": "ISC",
+  "author": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "@zwerm/botsocket-clients": "git+ssh://git@bitbucket.org/preferizi/botsocket-clients.git"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4"
+  }
+}

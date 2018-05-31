@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Minimum working implementation of the Bot Socket Client</title>
+    </head>
+    <body>
+        <div class="example-01">
+            <h1>Bot Socket Client minimum example</h1>
+            <h2>Connection settings</h2>
+            <form id="botForm">
+                <label for="botTeam">Bot Team</label>
+                <input id="botTeam" type="text" name="botTeam">
+                <label for="botId">Bot ID</label>
+                <input id="botId" name="botId" type="text">
+                <label for="channelId">Channel ID</label>
+                <input id="channelId" name="channelId" type="text">
+                <input type="submit" value="submit">
+            </form>
+            <h3>Connection status: <span id="botStatus"></span></h3>
+            <h2>Message</h2>
+            <form id="messageForm">
+                <label for="message">Message</label>
+                <input id="message" name="message" type="text">
+                <input type="submit" value="submit">
+            </form>
+            <h3>Messages</h3>
+            <pre id="messages"></pre>
+        </div>
+        <script src="./app.bundle.js"></script>
+    </body>
+</html>

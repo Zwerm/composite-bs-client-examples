@@ -8,7 +8,7 @@
         <div class="example-01">
             <h1>Bot Socket Client minimum example</h1>
             <h2>Connection settings</h2>
-            <form id="botForm">
+            <form id="connectionForm">
                 <label for="botTeam">Bot Team</label>
                 <input id="botTeam" type="text" name="botTeam">
                 <label for="botId">Bot ID</label>
@@ -17,7 +17,7 @@
                 <input id="channelId" name="channelId" type="text">
                 <input type="submit" value="submit">
             </form>
-            <h3>Connection status: <span id="botStatus"></span></h3>
+            <h3>Connection status: <span id="connectionStatus"></span></h3>
             <h2>Message</h2>
             <form id="messageForm">
                 <label for="message">Message</label>
@@ -25,7 +25,7 @@
                 <input type="submit" value="submit">
             </form>
             <h3>Messages</h3>
-            <pre id="messages"></pre>
+            <pre id="messageOut"></pre>
         </div>
         <script src="./app.bundle.js"></script>
     </body>

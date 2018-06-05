@@ -10,7 +10,7 @@
     "build": "webpack"
   },
   "dependencies": {
-    "@zwerm/botsocket-clients": "git+ssh://git@bitbucket.org/preferizi/botsocket-clients.git"
+    "@zwerm/botsocket-clients": "../../../botsocket-clients"
   },
   "devDependencies": {
     "css-loader": "^0.28.11",

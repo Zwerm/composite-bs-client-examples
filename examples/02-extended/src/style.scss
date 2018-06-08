@@ -1,0 +1,27 @@
+@import "~bulma/sass/utilities/all";
+@import "~bulma/sass/base/all";
+@import "~bulma/sass/components/card";
+@import "~bulma/sass/components/message";
+@import "~bulma/sass/components/navbar";
+@import "~bulma/sass/elements/box";
+@import "~bulma/sass/elements/button";
+@import "~bulma/sass/elements/container";
+@import "~bulma/sass/elements/content";
+@import "~bulma/sass/elements/form";
+@import "~bulma/sass/elements/image";
+@import "~bulma/sass/elements/tag";
+@import "~bulma/sass/elements/title";
+@import "~bulma/sass/layout/section";
+
+#messageOut {
+    height: calc(100vh - 388px);
+    overflow-y: scroll;
+}
+
+.message-outer {
+    margin-bottom: 0.5rem;
+}
+
+.card-image img {
+    min-height: 280px;
+}

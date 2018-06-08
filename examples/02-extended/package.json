@@ -1,0 +1,27 @@
+{
+  "name": "botsocket-client-example-02-css-framework",
+  "version": "0.1.0",
+  "description": "Bot Socket Client CSS Framework implementation",
+  "license": "ISC",
+  "author": "",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "@zwerm/botsocket-clients": "../../../botsocket-clients",
+    "bulma": "^0.7.1",
+    "classlist": "^2.0.0",
+    "dotenv-webpack": "^1.5.6"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bot Socket Client extended example</title>
+        <link rel="stylesheet" href="app.css">
+    </head>
+    <body>
+        <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <div class="navbar-item">Bot Socket Client Examples</div>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="../../01-minimum/dist/index.html" class="navbar-item">Example 01</a>
+                    <a href="#" class="navbar-item">Example 02</a>
+                </div>
+            </div>
+        </nav>
+        <div class="example-02 section">
+            <div class="container">
+                <div class="box">
+                    <h1 class="title is-3">Bot Socket Client extended example</h1>
+                    <div id="messageOut" class="box"></div>
+                    <form id="messageForm">
+                        <div class="tags has-addons"><span class="tag">Connection status</span><span id="connectionStatus" class="tag is-info">Awaiting connection</span></div>
+                        <div class="field has-addons">
+                            <p class="control is-expanded">
+                                <input id="message" name="message" class="input" type="text">
+                            </p>
+                            <p class="control">
+                                <input type="submit" value="send" class="button">
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="./app.bundle.js"></script>
+    </body>
+</html>

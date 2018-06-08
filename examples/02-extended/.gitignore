@@ -1,0 +1,4 @@
+node_modules
+dist/app.bundle.js
+dist/app.css
+.env

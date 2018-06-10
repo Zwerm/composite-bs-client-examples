@@ -1,0 +1,20 @@
+{
+  "name": "botsocket-client-example-00-bare-bones",
+  "version": "0.1.0",
+  "description": "Bare bones example implementation of the Zwerm web client",
+  "license": "ISC",
+  "author": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "@zwerm/botsocket-clients": "../../../botsocket-clients",
+    "dotenv-webpack": "^1.5.7"
+  },
+  "devDependencies": {
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4"
+  }
+}

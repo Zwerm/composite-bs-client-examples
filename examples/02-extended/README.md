@@ -11,13 +11,13 @@ npm install && npm run build
 ```
 Webpack will run and bundle assets. Open `dist/index.html` in your browser.
 ## How it works
-See the [previous example](../01-minimum/README.md) for information about the components `CompositeBSClient`, `EmitStatusMessageEventsLeaf` and `SendInputQueryOnFormSubmitLeaf`.
+See the [previous example](../01-minimal/README.md) for information about the components `CompositeBSClient`, `EmitStatusMessageEventsLeaf` and `SendInputQueryOnFormSubmitLeaf`.
 ### ScrollToBottomOnLetterLeaf(scrollElement)
 This leaf will scroll the given element (via required parameter `scrollElement`) to the bottom of its content, when a new message(letter) is received and displayed. This will ensure new messages are visible to the user as they are added.
 
 This leaf is part of `@zwerm/botsocket-clients`.
-### LetterRenderLeaf(chatAreaSelector)
-This custom leaf expands on the BasicLetterRenderingLeaf from the previous example. The `renderMessage` method uses the message type to control how the message is formatted before being appended to the `chatAreaSelector` element.
+### LetterRenderLeaf(messagesElement)
+This custom leaf expands on the BasicLetterRenderingLeaf from the previous example. The `renderMessage` method uses the message type to control how the message is formatted before being appended to the `messagesElement` element.
 #### Message types
 **Typing message**
 

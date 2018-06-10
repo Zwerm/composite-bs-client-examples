@@ -1,7 +1,7 @@
 # Example 01:
-## Minimum working implementation of a Bot Socket Client
+## Minimal working implementation of a Bot Socket Client
 ### Description
-A minimum implementation of a Bot Socket Client that can connect, send and receive messages.
+A minimal implementation of a Bot Socket Client that can connect, send and receive messages.
 ### Setup
 From the root of this directory, run:
 ```

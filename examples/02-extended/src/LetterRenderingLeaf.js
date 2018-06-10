@@ -33,9 +33,9 @@ class LetterRenderingLeaf extends BSClientLeaf {
 
     /**
      *
-     * @param {string} chatAreaSelector
+     * @param {string} MessagesElement
      */
-    constructor(chatAreaSelector) {
+    constructor(MessagesElement) {
         super();
 
         /**
@@ -43,7 +43,7 @@ class LetterRenderingLeaf extends BSClientLeaf {
          * @type {string}
          * @private
          */
-        this._chatAreaSelector = chatAreaSelector;
+        this._MessagesElement = MessagesElement;
     }
 
     // endregion
@@ -93,15 +93,15 @@ class LetterRenderingLeaf extends BSClientLeaf {
      * @param {'user'|'server'} senderClassification
      */
     renderTypingMessage(state, senderClassification) {
-        const lastElement = this._chatAreaSelector.lastElementChild;
+        const lastElement = this._MessagesElement.lastElementChild;
         const messageClasses = this.constructor.getMessageClasses(senderClassification);
 
         if (lastElement && lastElement.classList.contains('typing')) {
-            this._chatAreaSelector.removeChild(lastElement);
+            this._MessagesElement.removeChild(lastElement);
         }
 
         if (state === 'on') {
-            this._chatAreaSelector.insertAdjacentHTML('beforeend', this.createMessage('typing', messageClasses, '&hellip;'));
+            this._MessagesElement.insertAdjacentHTML('beforeend', this.createMessage('typing', messageClasses, '&hellip;'));
         }
     };
 
@@ -112,7 +112,7 @@ class LetterRenderingLeaf extends BSClientLeaf {
      */
     renderTextMessage(text, senderClassification) {
         const messageClasses = this.constructor.getMessageClasses(senderClassification);
-        this._chatAreaSelector.insertAdjacentHTML('beforeend', this.createMessage('text', messageClasses, text));
+        this._MessagesElement.insertAdjacentHTML('beforeend', this.createMessage('text', messageClasses, text));
     };
 
     /**
@@ -123,7 +123,7 @@ class LetterRenderingLeaf extends BSClientLeaf {
     renderQuickReplyMessage(message, senderClassification) {
         const messageClasses = this.constructor.getMessageClasses(senderClassification);
         const quickReplyMessage = this.createQuickReply('quick-reply', messageClasses, message);
-        this._chatAreaSelector.insertAdjacentHTML('beforeend', `<div class="is-clearfix message-outer">${quickReplyMessage}</div>`);
+        this._MessagesElement.insertAdjacentHTML('beforeend', `<div class="is-clearfix message-outer">${quickReplyMessage}</div>`);
     }
 
     /**
@@ -141,7 +141,7 @@ class LetterRenderingLeaf extends BSClientLeaf {
             clickUrl: card.clickUrl,
             classes: cardClasses
         });
-        this._chatAreaSelector.insertAdjacentHTML('beforeend', `<div class="is-clearfix message-outer">${cardMessage}</div>`);
+        this._MessagesElement.insertAdjacentHTML('beforeend', `<div class="is-clearfix message-outer">${cardMessage}</div>`);
     }
 
     /**
@@ -152,7 +152,7 @@ class LetterRenderingLeaf extends BSClientLeaf {
     renderImageMessage(url, senderClassification) {
         const messageClasses = this.constructor.getMessageClasses(senderClassification);
         const messageContent = `<img src="${url}">`;
-        this._chatAreaSelector.insertAdjacentHTML('beforeend', this.createMessage('image', messageClasses, messageContent));
+        this._MessagesElement.insertAdjacentHTML('beforeend', this.createMessage('image', messageClasses, messageContent));
 
     }
 
@@ -171,7 +171,6 @@ class LetterRenderingLeaf extends BSClientLeaf {
         if (message.quickReplies) {
             quickReplies = `<div class="buttons">`;
             message.quickReplies.forEach(function (quickReply) {
-                console.log(quickReply);
                 quickReplies += `<button class="button quick-reply-button" value="${quickReply.payload}">${quickReply.title}</button>`;
             });
             quickReplies += `</div>`;
@@ -233,6 +232,13 @@ class LetterRenderingLeaf extends BSClientLeaf {
         `;
     };
 
+    /**
+     *
+     * @param messageType
+     * @param messageClasses
+     * @param messageContent
+     * @return {string}
+     */
     createMessage(messageType, messageClasses, messageContent) {
         return `
             <div class="is-clearfix message-outer ${messageType}">

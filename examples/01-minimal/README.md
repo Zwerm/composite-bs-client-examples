@@ -24,7 +24,7 @@ The package `@zwerm/botsocket-clients` contains the building blocks required to 
 ### CompositeBSClient
 CompositeBSClient is the core of the client, it handles creating and managing the connection to the chat server, the sending and receiving of messages and registering "leafs". For more information about the concept of leafs, read the `@zwerm/botsocket-clients` documentation.
 ### EmitStatusMessageEventsLeaf(statusEmitter)
-This leaf handles emitting messages about the status of the connection. It requires an instance of Node's [Event](https://nodejs.org/api/events.html) class, with listeners registered for each status type. Here is an example of the connected status being logged to the console:
+This leaf handles emitting messages about the status of the connection. It requires an instance of Node's [Events](https://nodejs.org/api/events.html) class, with listeners registered for each status type. Here is an example of the connected status being logged to the console:
 ```javascript
 statusEmitter.on(EmitStatusMessageEventsLeaf.E_STATUS_CONNECT, () => console.log('connected'));
 ```

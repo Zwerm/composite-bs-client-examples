@@ -33,9 +33,9 @@ class LetterRenderingLeaf extends BSClientLeaf {
 
     /**
      *
-     * @param {string} MessagesElement
+     * @param {string} messagesElement
      */
-    constructor(MessagesElement) {
+    constructor(messagesElement) {
         super();
 
         /**
@@ -43,7 +43,7 @@ class LetterRenderingLeaf extends BSClientLeaf {
          * @type {string}
          * @private
          */
-        this._MessagesElement = MessagesElement;
+        this._messagesElement = messagesElement;
     }
 
     // endregion
@@ -93,15 +93,15 @@ class LetterRenderingLeaf extends BSClientLeaf {
      * @param {'user'|'server'} senderClassification
      */
     renderTypingMessage(state, senderClassification) {
-        const lastElement = this._MessagesElement.lastElementChild;
+        const lastElement = this._messagesElement.lastElementChild;
         const messageClasses = this.constructor.getMessageClasses(senderClassification);
 
         if (lastElement && lastElement.classList.contains('typing')) {
-            this._MessagesElement.removeChild(lastElement);
+            this._messagesElement.removeChild(lastElement);
         }
 
         if (state === 'on') {
-            this._MessagesElement.insertAdjacentHTML('beforeend', this.createMessage('typing', messageClasses, '&hellip;'));
+            this._messagesElement.insertAdjacentHTML('beforeend', this.createMessage('typing', messageClasses, '&hellip;'));
         }
     };
 
@@ -112,7 +112,7 @@ class LetterRenderingLeaf extends BSClientLeaf {
      */
     renderTextMessage(text, senderClassification) {
         const messageClasses = this.constructor.getMessageClasses(senderClassification);
-        this._MessagesElement.insertAdjacentHTML('beforeend', this.createMessage('text', messageClasses, text));
+        this._messagesElement.insertAdjacentHTML('beforeend', this.createMessage('text', messageClasses, text));
     };
 
     /**
@@ -123,7 +123,7 @@ class LetterRenderingLeaf extends BSClientLeaf {
     renderQuickReplyMessage(message, senderClassification) {
         const messageClasses = this.constructor.getMessageClasses(senderClassification);
         const quickReplyMessage = this.createQuickReply('quick-reply', messageClasses, message);
-        this._MessagesElement.insertAdjacentHTML('beforeend', `<div class="is-clearfix message-outer">${quickReplyMessage}</div>`);
+        this._messagesElement.insertAdjacentHTML('beforeend', `<div class="is-clearfix message-outer">${quickReplyMessage}</div>`);
     }
 
     /**
@@ -141,7 +141,7 @@ class LetterRenderingLeaf extends BSClientLeaf {
             clickUrl: card.clickUrl,
             classes: cardClasses
         });
-        this._MessagesElement.insertAdjacentHTML('beforeend', `<div class="is-clearfix message-outer">${cardMessage}</div>`);
+        this._messagesElement.insertAdjacentHTML('beforeend', `<div class="is-clearfix message-outer">${cardMessage}</div>`);
     }
 
     /**
@@ -152,7 +152,7 @@ class LetterRenderingLeaf extends BSClientLeaf {
     renderImageMessage(url, senderClassification) {
         const messageClasses = this.constructor.getMessageClasses(senderClassification);
         const messageContent = `<img src="${url}">`;
-        this._MessagesElement.insertAdjacentHTML('beforeend', this.createMessage('image', messageClasses, messageContent));
+        this._messagesElement.insertAdjacentHTML('beforeend', this.createMessage('image', messageClasses, messageContent));
 
     }
 

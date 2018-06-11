@@ -2,7 +2,7 @@
 This is a collection of implementations of the Bot Socket Client, with a quick tutorial for making your own Client.
 
 ## Examples
-[Example 00: Bare-bones implementation](./examples/00-bare-bones)
+[Example 00: Bare-bones implementation](./examples/00-bare-bones)  
 [Example 01: Minimal working implementation](./examples/01-minimal/)  
 [Example 02: Extended implementation](./examples/02-extended/)
 

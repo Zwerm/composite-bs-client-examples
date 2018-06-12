@@ -1,6 +1,6 @@
 const { EventEmitter } = require('events');
-const CompositeBSClient = require('@zwerm/botsocket-clients/CompositeBSClient');
-const EmitStatusMessageEventsLeaf = require('@zwerm/botsocket-clients/leafs/EmitStatusMessageEventsLeaf');
+const CompositeBSClient = require('@zwerm/composite-bs-client/CompositeBSClient');
+const EmitStatusMessageEventsLeaf = require('@zwerm/composite-bs-client/leafs/EmitStatusMessageEventsLeaf');
 const statusEmitter = new EventEmitter();
 
 statusEmitter.on(EmitStatusMessageEventsLeaf.E_STATUS_CONNECTING, () => console.warn(`connecting...`));

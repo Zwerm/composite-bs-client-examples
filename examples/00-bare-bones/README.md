@@ -1,7 +1,7 @@
 # Example 00:
-## Bare-bones Bot Socket Client
+## Bare-bones BotSocket Client
 ### Description
-A bare-bones Bot Socket Client. This example only demonstrates the connection functionality of the Bot Socket Client. See [Example 01](../01-minimal/) for basic message sending and receiving.
+A bare-bones BotSocket Client. This example only demonstrates the connection functionality of the Composite BotSocket Client. See [Example 01](../01-minimal/) for basic message sending and receiving.
 ### Setup
 Copy `env.example` to `.env` and fill out the three variables.
 

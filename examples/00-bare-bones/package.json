@@ -1,5 +1,5 @@
 {
-  "name": "botsocket-client-example-00-bare-bones",
+  "name": "composite-bs-client-example-00-bare-bones",
   "version": "0.1.0",
   "description": "Bare bones example implementation of the Zwerm web client",
   "license": "ISC",
@@ -10,7 +10,7 @@
     "build": "webpack"
   },
   "dependencies": {
-    "@zwerm/botsocket-clients": "../../../botsocket-clients",
+    "@zwerm/composite-bs-client": "^0.1.0",
     "dotenv-webpack": "^1.5.7"
   },
   "devDependencies": {

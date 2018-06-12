@@ -1,4 +1,4 @@
-const BSClientLeaf = require('@zwerm/botsocket-clients/leafs/BSClientLeaf');
+const BSClientLeaf = require('@zwerm/composite-bs-client/leafs/BSClientLeaf');
 
 class BasicLetterRenderingLeaf extends BSClientLeaf {
     /**

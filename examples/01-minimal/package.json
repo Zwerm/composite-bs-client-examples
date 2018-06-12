@@ -10,7 +10,7 @@
     "build": "webpack"
   },
   "dependencies": {
-    "@zwerm/botsocket-clients": "../../../botsocket-clients"
+    "@zwerm/composite-bs-client": "^0.1.0"
   },
   "devDependencies": {
     "css-loader": "^0.28.11",

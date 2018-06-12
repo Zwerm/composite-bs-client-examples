@@ -1,9 +1,9 @@
 const { EventEmitter } = require('events');
 const statusEmitter = new EventEmitter();
 
-const CompositeBSClient = require('@zwerm/botsocket-clients/CompositeBSClient');
-const EmitStatusMessageEventsLeaf = require('@zwerm/botsocket-clients/leafs/EmitStatusMessageEventsLeaf');
-const SendInputQueryOnFormSubmitLeaf = require('@zwerm/botsocket-clients/leafs/SendInputQueryOnFormSubmitLeaf');
+const CompositeBSClient = require('@zwerm/composite-bs-client/CompositeBSClient');
+const EmitStatusMessageEventsLeaf = require('@zwerm/composite-bs-client/leafs/EmitStatusMessageEventsLeaf');
+const SendInputQueryOnFormSubmitLeaf = require('@zwerm/composite-bs-client/leafs/SendInputQueryOnFormSubmitLeaf');
 const BasicLetterRenderingLeaf = require('./BasicLetterRenderingLeaf');
 
 const connectionForm = document.getElementById('connectionForm');

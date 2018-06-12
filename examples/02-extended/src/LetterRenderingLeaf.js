@@ -1,4 +1,5 @@
-const BSClientLeaf = require('@zwerm/botsocket-clients/leafs/BSClientLeaf');
+const classList = require('classlist');
+const BSClientLeaf = require('@zwerm/composite-bs-client/leafs/BSClientLeaf');
 
 class LetterRenderingLeaf extends BSClientLeaf {
     /**
@@ -94,9 +95,10 @@ class LetterRenderingLeaf extends BSClientLeaf {
      */
     renderTypingMessage(state, senderClassification) {
         const lastElement = this._messagesElement.lastElementChild;
+        const lastElementClassList = classList(lastElement);
         const messageClasses = this.constructor.getMessageClasses(senderClassification);
 
-        if (lastElement && lastElement.classList.contains('typing')) {
+        if (lastElement && lastElementClassList.contains('typing')) {
             this._messagesElement.removeChild(lastElement);
         }
 

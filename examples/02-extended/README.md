@@ -1,7 +1,7 @@
 # Example 02:
-## Extended Bot Socket Client
+## Extended BotSocket Client
 ### Description
-This example extends the functionality of the previous example, and demonstrates how a Bot Socket Client can be easily implemented in a CSS Framework, in this case, [Bulma](bulma.io).
+This example extends the functionality of the previous example, and demonstrates how a BotSocket Client can be easily implemented in a CSS Framework, in this case, [Bulma](bulma.io).
 ### Setup
 Copy `env.example` to `.env` and fill out the three variables.
 
@@ -15,7 +15,7 @@ See the [previous example](../01-minimal/README.md) for information about the co
 ### ScrollToBottomOnLetterLeaf(scrollElement)
 This leaf will scroll the given element (via required parameter `scrollElement`) to the bottom of its content, when a new message(letter) is received and displayed. This will ensure new messages are visible to the user as they are added.
 
-This leaf is part of `@zwerm/botsocket-clients`.
+This leaf is part of `@zwerm/composite-bs-client`.
 ### LetterRenderLeaf(messagesElement)
 This custom leaf expands on the BasicLetterRenderingLeaf from the previous example. The `renderMessage` method uses the message type to control how the message is formatted before being appended to the `messagesElement` element.
 #### Message types

@@ -1,13 +1,15 @@
 const { EventEmitter } = require('events');
 const statusEmitter = new EventEmitter();
+const classList = require('classlist');
 
-const CompositeBSClient = require('@zwerm/botsocket-clients/CompositeBSClient');
-const EmitStatusMessageEventsLeaf = require('@zwerm/botsocket-clients/leafs/EmitStatusMessageEventsLeaf');
-const SendInputQueryOnFormSubmitLeaf = require('@zwerm/botsocket-clients/leafs/SendInputQueryOnFormSubmitLeaf');
-const ScrollToBottomOnLetterLeaf = require('@zwerm/botsocket-clients/leafs/ScrollToBottomOnLetterLeaf');
+const CompositeBSClient = require('@zwerm/composite-bs-client/CompositeBSClient');
+const EmitStatusMessageEventsLeaf = require('@zwerm/composite-bs-client/leafs/EmitStatusMessageEventsLeaf');
+const SendInputQueryOnFormSubmitLeaf = require('@zwerm/composite-bs-client/leafs/SendInputQueryOnFormSubmitLeaf');
+const ScrollToBottomOnLetterLeaf = require('@zwerm/composite-bs-client/leafs/ScrollToBottomOnLetterLeaf');
 const LetterRenderingLeaf = require('./LetterRenderingLeaf');
 
 const connectionStatus = document.getElementById('connectionStatus');
+const connectionStatusClassList = classList(connectionStatus);
 const messageForm = document.getElementById('messageForm');
 const messageField = document.getElementById('message');
 const messageOut = document.getElementById('messageOut');
@@ -29,8 +31,8 @@ function setStatus(status, level = null) {
             console.log(status);
     }
 
-    connectionStatus.classList.remove('is-success', 'is-info', 'is-warning', 'is-danger');
-    connectionStatus.classList.add(levelClass);
+    connectionStatusClassList.remove('is-success', 'is-info', 'is-warning', 'is-danger');
+    connectionStatusClassList.add(levelClass);
     connectionStatus.innerHTML = status;
 }
 
@@ -59,7 +61,7 @@ const bsc = CompositeBSClient
  */
 document.addEventListener('click', function (e) {
     if (e.target) {
-        const classes = e.target.classList;
+        const classes = classList(e.target);
         const text = e.target.textContent || e.target.innerText;
         const value = e.target.value;
 

@@ -58,7 +58,7 @@ CompositeBSClient
     .registerLeaf(new EmitStatusMessageEventsLeaf(statusEmitter))
     .connect();
 ```
-#####SendInputQueryOnFormSubmitLeaf(messageForm, messageField)
+##### SendInputQueryOnFormSubmitLeaf(messageForm, messageField)
 This leaf handles sending the message field value on submission of the message form. It will prevent the default submission behaviour of the form (i.e. an HTTP GET or POST). It requires the form element that is submitted and the field element that contains the message value to send.
 ```javascript
 const SendInputQueryOnFormSubmitLeaf = require('@zwerm/composite-bs-client/leafs/SendInputQueryOnFormSubmitLeaf');
